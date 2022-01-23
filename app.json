@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "我的小程序",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#f0f",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "selectedColor":"#FF1493",
+    "backgroundColor":"#778899",
+    "position":"bottom",
+    "list": [
+      {
+      "text": "首页",
+      "pagePath": "pages/index/index"
+      },
+      {
+        "text": "日志",
+        "pagePath": "pages/logs/logs"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
