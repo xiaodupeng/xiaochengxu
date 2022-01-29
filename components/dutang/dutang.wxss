@@ -1,0 +1,5 @@
+.dutang{
+  color: pink;
+  margin: 50rpx auto;
+  text-align: center;
+}

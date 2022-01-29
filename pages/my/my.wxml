@@ -1,0 +1,9 @@
+<!--pages/my/my.wxml-->
+<view class="myBox">
+  <view class="userinfo">
+    <image wx:if="{{userInfo}}" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"/>
+    <image wx:else class="userinfo-avatar" src="../../static/img/my.png" />
+    <view>昵称：{{userInfo.nickName?userInfo.nickName:'--'}}</view>
+  </view>
+  <button wx:if="{{!userInfo}}" bindtap="getUserProfile" type="primary">登录</button>
+</view>

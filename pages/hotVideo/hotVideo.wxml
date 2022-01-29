@@ -1,0 +1,11 @@
+<view class="videoBox" wx:for="{{hotArr}}" wx:key="id">
+  <view class="headerBox">
+    <image bindtap="previewImage" data-header="{{item.data.author.icon}}" class="header" src="{{item.data.author.icon}}"></image>
+    <text class="name">{{item.data.author.name}}</text>
+  </view>  
+  <view class="title">
+    {{item.data.title}}
+  </view>
+  <image bindtap="goDetail" data-detail="{{item.data.playUrl}}" class="videoImg" src="{{item.data.cover.detail}}"></image>
+  <view class="description">简介：{{item.data.description}}</view>
+</view>

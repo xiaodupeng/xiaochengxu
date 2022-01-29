@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "dutang-tag-name": "/components/dutang/dutang",
+    "today-tag-name": "/components/today/today",
+    "code-tag-name": "/components/code/code"
+  }
 }

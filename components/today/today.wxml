@@ -1,0 +1,7 @@
+<view>
+  <view class="title">今天：{{today}}</view>
+  <view class="list" wx:for="{{listArr}}" wx:key="date">
+    <view>{{item.date}}</view>
+    <view>{{item.title}}</view>
+  </view>
+</view>

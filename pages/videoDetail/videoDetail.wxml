@@ -1,0 +1,12 @@
+<!--pages/videoDetail/videoDetail.wxml-->
+<video 
+  id="myVideo"
+  src="{{playUrl}}"
+  danmu-list="{{danmuList}}"
+  danmu-btn="true"
+  autoplay="true"
+  enable-danmu
+  class="video"
+>
+</video>
+<button type="primary" bindtap="bindSendDanmu">发送弹幕</button>

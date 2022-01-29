@@ -1,0 +1,32 @@
+.code{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.inputBox{
+  margin-bottom: 20rpx;
+}
+.inputs{
+  padding: 10rpx 20rpx;
+  border: 2rpx solid #000000;
+  border-radius: 15rpx;
+  margin-top: 10rpx;
+}
+.shengchen{
+  width: 200rpx;
+  margin-top: 50rpx;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 120px;
+  height: 120px;
+}

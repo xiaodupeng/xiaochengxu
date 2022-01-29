@@ -1,0 +1,18 @@
+<view class="code">
+  <view class="inputBox">
+    <text>请输入(必填)</text>
+    <input value="{{text}}" class="inputs" type="text" data-input="text" bindinput="hadelInput"/>
+  </view>
+  <view class="inputBox">
+    <text>请输入图片大小(选填)</text>
+    <input value="{{size}}" class="inputs" type="number" data-input="size" bindinput="hadelInput"/>
+  </view>
+  <button class="shengchen" type="primary" bindtap="shengchen">生成</button>
+
+  <van-overlay show="{{ show }}" bind:click="onClickHide">
+    <view class="wrapper">
+      <image src="{{imgUrl}}" class="block" catch:tap="noop" />
+      <button class="shengchen" type="primary" bindtap="saveimg">保存相册</button>
+    </view>
+  </van-overlay>  
+</view>

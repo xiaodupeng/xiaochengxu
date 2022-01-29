@@ -1,30 +1,41 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/my/my",
+    "pages/hotVideo/hotVideo",
+    "pages/videoDetail/videoDetail"
   ],
   "window":{
-    "navigationBarBackgroundColor": "#ccc",
-    "navigationBarTitleText": "我的小程序",
+    "navigationBarBackgroundColor": "#FF7F50",
+    "navigationBarTitleText": "查询天下",
     "navigationBarTextStyle":"white",
-    "backgroundColor": "#f0f",
-    "backgroundTextStyle": "dark"
+    "backgroundColor": "#bcc0c9",
+    "backgroundTextStyle": "light"
   },
   "tabBar": {
+    "color": "#333333",
     "selectedColor":"#FF1493",
-    "backgroundColor":"#778899",
+    "backgroundColor":"#FF7F50",
     "position":"bottom",
     "list": [
       {
       "text": "首页",
-      "pagePath": "pages/index/index"
+      "pagePath": "pages/index/index",
+      "iconPath": "static/img/home.png",
+      "selectedIconPath": "static/img/home_select.png"
       },
       {
-        "text": "日志",
-        "pagePath": "pages/logs/logs"
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "static/img/my.png",
+        "selectedIconPath": "static/img/my_select.png"        
       }
     ]
   },
-  "style": "v2",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-overlay": "@vant/weapp/overlay/index"
+  },  
   "sitemapLocation": "sitemap.json"
 }

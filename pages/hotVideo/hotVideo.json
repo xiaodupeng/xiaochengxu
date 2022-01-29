@@ -1,0 +1,5 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance":100,
+  "navigationBarTitleText": "热门视频"
+}

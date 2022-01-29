@@ -1,25 +1,30 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+.scrollView{
+  white-space: nowrap;
 }
-
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.list{
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0 20rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
+.active{
+  color: #4675F9;
+  position: relative;
 }
-
-.baclass{
-  width: 700rpx;
-  height: 200rpx;
-  background-color: pink;
+.active::after{
+  content: "";
+  display: block;
+  height: 8rpx;
+  width: 52rpx;
+  background: #4675F9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 16rpx;
+}
+.contents{
+  height: calc(100vh - 100rpx);
+  overflow-y: scroll;
 }

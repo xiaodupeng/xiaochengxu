@@ -1,85 +1,37 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
-    item:[
-      {text:'html',val:"true"},
-      {text:'html2',val:"false"},
-      {text:'html3',val:"false"}
-    ],
-    inputVal:1234
+    currentTab:1,
+    list:[
+      {id:1,name:"毒鸡汤"},
+      {id:2,name:"历史上的今天"},
+      {id:3,name:"二维码生成"},
+      {id:4,name:"热门视频"},
+    ]
   },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  handleout(){
-    // console.log(this.data)
-    console.log('out')
-  },
-  handlein(){
-    console.log('in')
-  },
-  dian(e){
-    console.log(e)
-  },
-  bindcheck(e){
-    console.log(e)
-  },
-  changinput(e){
-    this.setData({
-      inputVal: e.detail.value
-    })
-  },
-  onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
-    wx.request({
-      url: 'https://v.juhe.cn/postcode/query', //仅为示例，并非真实的接口地址
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success (res) {
-        console.log(res.data)
-      }
-    })    
-  },
-  getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+  swichNav(e){
+    var cur = e.target.dataset.current;
+    if(this.data.currentTab==cur){
+      return
+    }else{
+      if(cur==1){
+        //触发子组件方法
+        this.selectComponent('.dutangTag').getData()
+      }else if(cur == 2){
+        this.selectComponent('.todayTag').getData()
+      }else if(cur == 4){
+        wx.navigateTo({
+          url:"../hotVideo/hotVideo"
         })
       }
-    })
+     this.setData({
+      currentTab:cur
+     })
+    }
   },
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+  onLoad() {
+    this.selectComponent('.dutangTag').getData()
+  },
 })

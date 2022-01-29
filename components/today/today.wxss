@@ -1,0 +1,8 @@
+.title{
+  text-align: center;
+  margin: 50rpx auto;
+}
+.list{
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+}

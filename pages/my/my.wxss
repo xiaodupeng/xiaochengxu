@@ -1,0 +1,23 @@
+/* pages/my/my.wxss */
+.myBox{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+}
+.userinfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.userinfo-avatar{
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
